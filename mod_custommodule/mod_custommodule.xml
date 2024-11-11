@@ -1,0 +1,64 @@
+<extension type="module" version="4.9.9" method="upgrade">
+  <name>mod_custommodule</name>
+  <author>Nilesh Mittha</author>
+  <version>1.0.0</version>
+  <description>A simple custom Joomla module</description>
+  <config>
+  
+    <fields name="params">
+        <fieldset name="basic"
+        
+			addfieldprefix="Joomla\Component\Categories\Administrator\Field">
+            
+   
+      <field
+                name="catid"
+                type="category"
+                extension="com_content"
+                label="Select Category"
+                description="Choose the category to display articles from."
+                
+            />
+
+            <field
+                name="catidM"
+                type="category"
+                multiple="true"
+                extension="com_content"
+                label="Select Categories"
+                description="Choose multiple categories to display articles from."
+                default=""
+            />
+            <field
+                name="status"
+                type="list"
+                label="Select Status"
+                description="Choose the category to display articles from." >
+
+             <option value="">-- Select Status --</option>
+    <option value="1">Published</option>
+    <option value="0">Unpublished</option>
+</field>
+
+ <field
+                name="limit"
+                type="number"
+                label="Limit of Article"
+                description="Choose the category to display articles from."
+                
+            />
+            
+
+        </fieldset>
+    </fields>
+    </config>
+  <files>
+    <file module="mod_custommodule">mod_custommodule.php</file>
+    <file file="customHelper" >customHelper.php</file>
+    <folder>src</folder>
+    <folder>tmpl</folder>
+    
+  </files>
+ 
+ 
+</extension>
